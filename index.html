@@ -13,6 +13,7 @@
             background-image: url('https://source.unsplash.com/1600x900/?stars,galaxy');
             background-size: cover;
             background-attachment: fixed;
+            transition: background 0.5s, color 0.5s;
         }
         nav {
             background-color: rgba(30, 30, 30, 0.8);
@@ -64,6 +65,23 @@
             width: 100%;
             bottom: 0;
         }
+        .dark-mode {
+            background-color: #111;
+            color: #ddd;
+        }
+        .toggle-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background: #9b5de5;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .toggle-btn:hover {
+            background: #00f5d4;
+        }
     </style>
 </head>
 <body>
@@ -77,9 +95,15 @@
     <div class="container">
         <h1>Welcome to the Dharma Nexus Empire</h1>
         <p>Explore the vast multiverse, where myths become reality.</p>
+        <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
     </div>
     <footer>
         &copy; 2025 Dharma Nexus Empire. All rights reserved.
     </footer>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
 </body>
 </html>
