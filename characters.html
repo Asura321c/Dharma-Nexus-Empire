@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://source.unsplash.com/1600x900/?nebula,galaxy');
+            background-image: url('https://source.unsplash.com/1600x900/?space,stars');
             background-size: cover;
             background-attachment: fixed;
         }
@@ -45,13 +45,19 @@
             -webkit-text-fill-color: transparent;
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
         }
-        .character-section {
+        .character {
             margin: 40px auto;
             padding: 20px;
             background: rgba(30, 30, 30, 0.8);
             border-radius: 10px;
             width: 80%;
             text-align: left;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         footer {
             text-align: center;
@@ -73,22 +79,22 @@
         <a href="multiverse.html">Multiverse</a>
     </nav>
     <div class="container">
-        <h1>Key Characters of the Dharma Nexus Empire</h1>
-        <div class="character-section">
+        <h1>Meet the Characters</h1>
+        <div class="character">
             <h2>The Creator</h2>
-            <p>A visionary who seeks to shape the multiverse with order and innovation...</p>
+            <p>A visionary who established the Dharma Nexus Empire, shaping the multiverse...</p>
         </div>
-        <div class="character-section">
+        <div class="character">
             <h2>The Observer</h2>
-            <p>Tasked with maintaining balance, the Observer watches over all realities...</p>
+            <p>The keeper of balance, ensuring the empire does not collapse under its own weight...</p>
         </div>
-        <div class="character-section">
+        <div class="character">
             <h2>The Destroyer</h2>
-            <p>Believing in the necessity of chaos, the Destroyer reshapes existence...</p>
+            <p>Wielding power beyond imagination, he ensures that only the strongest civilizations endure...</p>
         </div>
     </div>
     <footer>
         &copy; 2025 Dharma Nexus Empire. All rights reserved.
     </footer>
 </body>
-  </html>
+</html>
