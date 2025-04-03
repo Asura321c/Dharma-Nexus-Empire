@@ -2,93 +2,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dharma Nexus Empire - Home</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js">
+    <title>Dharma Nexus Empire</title>
     <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes starAnimation {
+            from { background-position: 0 0; }
+            to { background-position: -1000px 1000px; }
+        }
         body {
-            margin: 0;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
+            background: black url('https://source.unsplash.com/1600x900/?nebula,galaxy') no-repeat center center fixed;
+            background-size: cover;
+            animation: starAnimation 100s linear infinite;
             color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
             text-align: center;
         }
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-        .content {
-            position: relative;
-            z-index: 2;
-            padding: 50px;
-        }
-        .controls {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: rgba(0, 0, 0, 0.7);
+        nav {
+            background-color: rgba(10, 10, 10, 0.9);
             padding: 10px;
-            border-radius: 5px;
         }
-        .controls button {
+        nav a {
+            color: #9d4edd;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #48cae4;
+        }
+        .container {
+            padding: 50px;
+            animation: fadeIn 2s ease-in;
+        }
+        h1 {
+            font-size: 3em;
+            background: linear-gradient(90deg, #9d4edd, #48cae4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeIn 3s ease-in;
+        }
+        p {
+            font-size: 1.3em;
+            color: #b8c0ff;
+            animation: fadeIn 4s ease-in;
+        }
+        .join-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
             background: #9d4edd;
             color: #fff;
-            border: none;
-            padding: 10px;
-            margin: 5px;
-            cursor: pointer;
+            text-decoration: none;
             border-radius: 5px;
+            font-size: 1.2em;
+            transition: background 0.3s;
         }
-        .controls button:hover {
+        .join-btn:hover {
             background: #48cae4;
         }
-        .stars {
-            background: url('https://source.unsplash.com/1600x900/?galaxy,stars') no-repeat center center fixed;
-            background-size: cover;
-            animation: moveStars 50s linear infinite;
-        }
-        @keyframes moveStars {
-            from { background-position: 0 0; }
-            to { background-position: 1000px 1000px; }
-        }
-        .grid {
-            background: black;
-        }
-        .grid::before {
-            content: "";
-            position: absolute;
+        footer {
+            background-color: rgba(10, 10, 10, 0.9);
+            padding: 10px;
+            position: fixed;
             width: 100%;
-            height: 100%;
-            background: repeating-linear-gradient(
-                to bottom, rgba(255, 0, 255, 0.2) 0px, rgba(0, 0, 0, 0) 20px
-            ), repeating-linear-gradient(
-                to right, rgba(0, 255, 255, 0.2) 0px, rgba(0, 0, 0, 0) 20px
-            );
-            animation: gridMove 5s linear infinite;
-        }
-        @keyframes gridMove {
-            from { transform: translateY(0px); }
-            to { transform: translateY(-20px); }
+            bottom: 0;
         }
     </style>
 </head>
 <body>
-    <div id="background" class="background stars"></div>
-    <div class="content">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="lore.html">Lore</a>
+        <a href="factions.html">Factions</a>
+        <a href="multiverse.html">Multiverse</a>
+    </nav>
+    <div class="container">
         <h1>Welcome to the Dharma Nexus Empire</h1>
-        <p>Shape fate, command reality.</p>
+        <p>"We shape fate, we command reality."</p>
+        <p>Forged from the ashes of countless realities, the Dharma Nexus Empire stands eternal, guiding the multiverse toward its ultimate destiny.</p>
+        <a href="https://discord.gg/example" class="join-btn">Join the Empire</a>
     </div>
-    <div class="controls">
-        <button onclick="setBackground('stars')">Stars</button>
-        <button onclick="setBackground('grid')">Glowing Grid</button>
-    </div>
-    <script>
-        function setBackground(effect) {
-            document.getElementById('background').className = `background ${effect}`;
-        }
-    </script>
+    <footer>
+        &copy; 2025 Dharma Nexus Empire. All rights reserved.
+    </footer>
 </body>
 </html>
