@@ -4,78 +4,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dharma Nexus Empire</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-        body {
-            background: url('https://source.unsplash.com/1600x900/?space,stars') no-repeat center center fixed;
-            background-size: cover;
-            color: #fff;
-            font-family: 'Orbitron', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        nav {
-            background-color: rgba(30, 30, 30, 0.8);
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a {
-            color: #9b5de5;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #00f5d4;
-        }
-        .container {
-            text-align: center;
-            padding: 100px 20px;
-            animation: fadeIn 2s ease-in-out;
-        }
-        h1 {
-            font-size: 50px;
-            background: linear-gradient(90deg, #9b5de5, #00f5d4, #1e1e1e);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: glow 1.5s infinite alternate;
-        }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        @keyframes glow {
-            from { text-shadow: 0 0 5px #9b5de5, 0 0 10px #00f5d4; }
-            to { text-shadow: 0 0 10px #9b5de5, 0 0 20px #00f5d4; }
+        body {
+            background: url('https://source.unsplash.com/1600x900/?stars,galaxy') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            animation: fadeIn 2s ease-in;
+        }
+        nav {
+            background-color: rgba(30, 30, 30, 0.8);
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        nav a {
+            color: #8a2be2;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .container {
+            margin-top: 100px;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 50px;
+            font-weight: bold;
+            color: #00bfff;
+            text-shadow: 0 0 15px #00bfff;
+        }
+        p {
+            font-size: 22px;
+            color: #8a2be2;
+            text-shadow: 0 0 10px #8a2be2;
         }
         .motto {
-            font-size: 24px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffcc00;
             margin-top: 20px;
-            color: #00f5d4;
+            text-shadow: 0 0 15px #ffcc00;
         }
-        .discord-link {
-            margin-top: 30px;
-            font-size: 18px;
-            display: block;
-            color: #9b5de5;
+        .discord {
+            margin-top: 20px;
+        }
+        .discord a {
+            color: #00bfff;
+            font-size: 20px;
             text-decoration: none;
-            transition: color 0.3s;
-        }
-        .discord-link:hover {
-            color: #00f5d4;
+            text-shadow: 0 0 10px #00bfff;
         }
         footer {
-            text-align: center;
-            padding: 10px;
             background-color: rgba(30, 30, 30, 0.8);
-            color: #fff;
+            padding: 10px;
             position: fixed;
             width: 100%;
             bottom: 0;
+            color: #fff;
         }
     </style>
 </head>
@@ -91,7 +86,9 @@
         <h1>Welcome to the Dharma Nexus Empire</h1>
         <p>Explore the vast multiverse, where myths become reality.</p>
         <p class="motto">We shape fate. We command reality.</p>
-        <a href="https://discord.gg/wrnkwysFKQ" class="discord-link">Join Our Discord</a>
+        <div class="discord">
+            <a href="https://discord.gg/wrnkwysFKQ" target="_blank">Join Our Discord Community</a>
+        </div>
     </div>
     <footer>
         &copy; 2025 Dharma Nexus Empire. All rights reserved.
