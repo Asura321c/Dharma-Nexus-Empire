@@ -8,19 +8,23 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
+        @keyframes starAnimation {
+            from { background-position: 0 0; }
+            to { background-position: -1000px 1000px; }
+        }
         body {
-            background: black url('https://source.unsplash.com/1600x900/?galaxy,nebula') no-repeat center center fixed;
+            background: black url('https://source.unsplash.com/1600x900/?nebula,galaxy') no-repeat center center fixed;
             background-size: cover;
+            animation: starAnimation 100s linear infinite;
             color: #fff;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            animation: fadeIn 2s ease-in;
+            text-align: center;
         }
         nav {
             background-color: rgba(10, 10, 10, 0.9);
-            padding: 15px;
-            text-align: center;
+            padding: 10px;
         }
         nav a {
             color: #9d4edd;
@@ -32,49 +36,39 @@
         nav a:hover {
             color: #48cae4;
         }
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            animation: fadeIn 3s ease-in;
+        .container {
+            padding: 50px;
+            animation: fadeIn 2s ease-in;
         }
-        .hero h1 {
+        h1 {
             font-size: 3em;
             background: linear-gradient(90deg, #9d4edd, #48cae4);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            animation: fadeIn 3s ease-in;
         }
-        .hero p {
-            font-size: 1.5em;
+        p {
+            font-size: 1.3em;
             color: #b8c0ff;
-            max-width: 800px;
-            margin: auto;
+            animation: fadeIn 4s ease-in;
         }
-        .button {
+        .join-btn {
             display: inline-block;
             margin-top: 20px;
-            padding: 10px 20px;
+            padding: 12px 24px;
             background: #9d4edd;
             color: #fff;
             text-decoration: none;
             border-radius: 5px;
+            font-size: 1.2em;
             transition: background 0.3s;
         }
-        .button:hover {
+        .join-btn:hover {
             background: #48cae4;
         }
-        .section {
-            margin: 50px auto;
-            padding: 20px;
-            background: rgba(10, 10, 10, 0.9);
-            border-radius: 10px;
-            max-width: 800px;
-            text-align: center;
-        }
         footer {
-            text-align: center;
-            padding: 10px;
             background-color: rgba(10, 10, 10, 0.9);
-            color: #fff;
+            padding: 10px;
             position: fixed;
             width: 100%;
             bottom: 0;
@@ -86,22 +80,16 @@
         <a href="index.html">Home</a>
         <a href="lore.html">Lore</a>
         <a href="factions.html">Factions</a>
-        <a href="characters.html">Characters</a>
         <a href="multiverse.html">Multiverse</a>
     </nav>
-    <div class="hero">
-        <h1>We Shape Fate, We Command Reality</h1>
-        <p>The Dharma Nexus Empire stands as the supreme force across the multiverse, governing reality, shaping destiny, and maintaining absolute order.</p>
-        <a href="lore.html" class="button">Explore the Empire</a>
+    <div class="container">
+        <h1>Welcome to the Dharma Nexus Empire</h1>
+        <p>"We shape fate, we command reality."</p>
+        <p>Forged from the ashes of countless realities, the Dharma Nexus Empire stands eternal, guiding the multiverse toward its ultimate destiny.</p>
+        <a href="https://discord.gg/example" class="join-btn">Join the Empire</a>
     </div>
-    <div class="section">
-        <h2>Our Mission</h2>
-        <p>To control reality, expand our reach, and ensure balance across all universes.</p>
-    </div>
-    <div class="section">
-        <h2>Meet the Supreme Leaders</h2>
-        <p>The **Creator**, **Observer/Preserver**, and **Destroyer** each play a vital role in shaping the empire’s future.</p>
-    </div>
-    <div class="section">
-        <h2>Factions of Power</h2>
-        <p>From the Architects to the Annih
+    <footer>
+        &copy; 2025 Dharma Nexus Empire. All rights reserved.
+    </footer>
+</body>
+</html>
