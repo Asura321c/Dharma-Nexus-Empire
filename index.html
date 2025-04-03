@@ -1,76 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dharma Nexus Empire</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+        body {
+            background: url('https://source.unsplash.com/1600x900/?space,stars') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: rgba(30, 30, 30, 0.8);
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #9b5de5;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #00f5d4;
+        }
+        .container {
+            text-align: center;
+            padding: 100px 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        h1 {
+            font-size: 50px;
+            background: linear-gradient(90deg, #9b5de5, #00f5d4, #1e1e1e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 1.5s infinite alternate;
+        }
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        body {
-            background: black url('https://source.unsplash.com/1600x900/?stars,galaxy') no-repeat center center fixed;
-            background-size: cover;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            animation: fadeIn 2s ease-in;
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #9b5de5, 0 0 10px #00f5d4; }
+            to { text-shadow: 0 0 10px #9b5de5, 0 0 20px #00f5d4; }
         }
-        nav {
-            background-color: rgba(10, 10, 10, 0.9);
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: #9d4edd;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #48cae4;
-        }
-        .container {
-            text-align: center;
-            padding: 50px;
-            animation: fadeIn 3s ease-in;
-        }
-        h1 {
-            font-size: 2.5em;
-            background: linear-gradient(90deg, #9d4edd, #48cae4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        p {
-            font-size: 1.2em;
-            color: #b8c0ff;
-        }
-        .section {
-            margin: 50px 0;
-            padding: 20px;
-            background: rgba(10, 10, 10, 0.9);
-            border-radius: 10px;
+        .motto {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #00f5d4;
         }
         .discord-link {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: #9d4edd;
-            color: #fff;
+            margin-top: 30px;
+            font-size: 18px;
+            display: block;
+            color: #9b5de5;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
+            transition: color 0.3s;
         }
         .discord-link:hover {
-            background: #48cae4;
+            color: #00f5d4;
         }
         footer {
             text-align: center;
             padding: 10px;
-            background-color: rgba(10, 10, 10, 0.9);
+            background-color: rgba(30, 30, 30, 0.8);
             color: #fff;
             position: fixed;
             width: 100%;
@@ -80,6 +81,7 @@
 </head>
 <body>
     <nav>
+        <a href="#home">Home</a>
         <a href="#lore">Lore</a>
         <a href="#factions">Factions</a>
         <a href="#characters">Characters</a>
@@ -88,33 +90,8 @@
     <div class="container">
         <h1>Welcome to the Dharma Nexus Empire</h1>
         <p>Explore the vast multiverse, where myths become reality.</p>
-    </div>
-    <div class="container">
-        <div class="section" id="lore">
-            <h2>Lore</h2>
-            <p>Discover the origins and the cosmic forces shaping our universe.</p>
-            <a href="lore.html" class="discord-link">Read More</a>
-        </div>
-        <div class="section" id="factions">
-            <h2>Factions</h2>
-            <p>Meet the powerful factions that govern the empire.</p>
-            <a href="factions.html" class="discord-link">Explore</a>
-        </div>
-        <div class="section" id="characters">
-            <h2>Characters</h2>
-            <p>Learn about the heroes and villains shaping destiny.</p>
-            <a href="characters.html" class="discord-link">View Characters</a>
-        </div>
-        <div class="section" id="multiverse">
-            <h2>Multiverse</h2>
-            <p>Dive into the secrets of time, space, and technology.</p>
-            <a href="multiverse.html" class="discord-link">Enter the Multiverse</a>
-        </div>
-        <div class="section">
-            <h2>Join Our Community</h2>
-            <p>Connect with other explorers in our Discord server.</p>
-            <a class="discord-link" href="https://discord.gg/YOUR_INVITE_LINK" target="_blank">Join Discord</a>
-        </div>
+        <p class="motto">We shape fate. We command reality.</p>
+        <a href="https://discord.gg/wrnkwysFKQ" class="discord-link">Join Our Discord</a>
     </div>
     <footer>
         &copy; 2025 Dharma Nexus Empire. All rights reserved.
